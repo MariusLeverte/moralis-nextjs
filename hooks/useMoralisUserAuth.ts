@@ -8,6 +8,7 @@ const useMoralisUserAuthStatus = () => {
   const { isAuthUndefined, isAuthenticating, isAuthenticated } = useMoralis();
 
   useEffect(() => {
+    setVisible(false);
     if (!isAuthUndefined) return;
     if (isAuthenticating) return;
     if (isAuthenticated) return;
